@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-body">
+      <form action="#" method = "post">
+        <h1>{{item.name}}</h1>
+        <p><em>Description:</em> {{item.description}}</p>
+        <a href='{{url_for('editCatalogItem',
+                catalog_id=item.catalog_id, catalogItem_id=catalogItem_id)}}'
+            class='btn btn-info' role='button'>Edit</a>
+        <a href='{{url_for('catalogMenu')}}' class='btn btn-info' role='button'>
+          Back</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

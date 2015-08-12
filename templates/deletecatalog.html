@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-body">
+      <h1>Delete Catalog</h1>
+      <p> Are you sure you want to delete Catalog {{catalog.name}}? </p>
+      <br>
+      <form action="{{ url_for('deleteCatalog',catalog_id = catalog_id)}}" method = 'post'>
+        <input type="submit" class="btn btn-info" value="Delete">
+        <a href="{{url_for('catalogItems', catalog_id = catalog_id)}}" 
+          class="btn btn-info" role="button">Cancel</a> 
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

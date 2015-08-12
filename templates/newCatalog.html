@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-body">
+      <form action="#" method = "post">
+        <h1>Create New Catalog Item</h1>
+        <dl>
+          <dt>Name:</dt>
+          <dd><input type ='text' size='30' name='name' placeholder = 'Football'>
+          </dd>
+          <dt>Description:</dt>
+          <dd><textarea name = 'description' rows='5' cols='40' 
+            placeholder = 'Add Catalog Description'></textarea></dd>
+        </dl>
+        <input type="submit" class="btn btn-info" value="Create">
+        <a href="{{url_for('catalogMenu')}}" class="btn btn-info" role="button">
+          Cancel</a> 
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
